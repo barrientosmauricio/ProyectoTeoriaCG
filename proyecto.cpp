@@ -2,7 +2,7 @@
 /* ----------------   PROYECTO FINAL --------------------------*/
 /*-----------------    2020-2   ---------------------------*/
 /*------------- Barrientos Veana Luis Mauricio ---------------*/
-/*------------- Ramírez Fierro Salma Arelly    ---------------*/
+/*------------- Fierro Salma    ---------------*/
 /*------------- Solano Tavera Francisco Javier    ---------------*/
 
 				//#define STB_IMAGE_IMPLEMENTATION
@@ -336,7 +336,7 @@ void dronFrame(void)
 	KeyFrame2[6].posY = 12.0f;
 	KeyFrame2[6].posZ = 5.0f;
 	KeyFrame2[6].giro = 0.0f;
-	
+
 	KeyFrame2[5].posX = -60.0f;
 	KeyFrame2[5].posY = 10.0f;
 	KeyFrame2[5].posZ = 3.0f;
@@ -627,58 +627,58 @@ int mov_dron = 0;
 float velocidad = 0;
 void animate(void)
 {
-//ANIMACION DRON
-	/*if (animacion) {
-		if (mov_dron == 0)
-		{
-			//avionRotY = 0.0f;
-			movdron_y += velocidad;
-			if (movdron_y >= 35.0f) {
+	//ANIMACION DRON
+		/*if (animacion) {
+			if (mov_dron == 0)
+			{
+				//avionRotY = 0.0f;
+				movdron_y += velocidad;
+				if (movdron_y >= 35.0f) {
+					mov_dron = 1;
+				}
+			}
+
+			if (mov_dron == 1)
+			{
+				movdron_z += velocidad;
+				//avionRotY = 90.0f;
+				if (movdron_z >= 35.0f)
+					mov_dron = 2;
+			}
+
+			if (mov_dron == 2)
+			{
+				movdron_x += velocidad;
+				dronRotY = -90.0f;
+				if (movdron_x >= 40.0f)
+					mov_dron = 3;
+			}
+
+			if (mov_dron == 3)
+			{
+				movdron_z -= velocidad;
+				dronRotY = 360.0f;
+				if (movdron_z <= -60.0f)
+					mov_dron = 4;
+			}
+
+			if (mov_dron == 4)
+			{
+				movdron_x -= velocidad;
+				dronRotY = 90.0f;
+				if (movdron_x <= -35.0f)
+					mov_dron = 5;
+			}
+
+			if (mov_dron == 5)
+			{
+				dronRotY = 180.0f;
+				//if (movdron_z <= 30.0f)
 				mov_dron = 1;
 			}
-		}
+		}*/
 
-		if (mov_dron == 1)
-		{
-			movdron_z += velocidad;
-			//avionRotY = 90.0f;
-			if (movdron_z >= 35.0f)
-				mov_dron = 2;
-		}
-
-		if (mov_dron == 2)
-		{
-			movdron_x += velocidad;
-			dronRotY = -90.0f;
-			if (movdron_x >= 40.0f)
-				mov_dron = 3;
-		}
-
-		if (mov_dron == 3)
-		{
-			movdron_z -= velocidad;
-			dronRotY = 360.0f;
-			if (movdron_z <= -60.0f)
-				mov_dron = 4;
-		}
-
-		if (mov_dron == 4)
-		{
-			movdron_x -= velocidad;
-			dronRotY = 90.0f;
-			if (movdron_x <= -35.0f)
-				mov_dron = 5;
-		}
-
-		if (mov_dron == 5)
-		{
-			dronRotY = 180.0f;
-			//if (movdron_z <= 30.0f)
-			mov_dron = 1;
-		}
-	}*/
-
-	//ANIMACION LAMBO
+		//ANIMACION LAMBO
 	{
 		switch (recorridoAuto) {
 		case 1:
@@ -843,9 +843,9 @@ void animate(void)
 bool flag = false;
 
 void display(Shader shader, Shader text, Model cielo, Model ave, Model alaDer, Model alaIzq, Model PieDer, Model PieIzq,
-	Model casa, Model comedor,  Model alberca, Model sala, Model cocina, Model Salma, Model baño1, Model baño2, Model Javi, Model Mau, Model jardin,
+	Model casa, Model comedor, Model alberca, Model sala, Model cocina, Model Salma, Model baño1, Model baño2, Model Javi, Model Mau, Model jardin,
 	Model cochera, Model carro1, Model dron, Model carro2, Model robot, Model BraDer, Model BraIzq)
-	
+
 {
 
 	//text.use();
@@ -969,7 +969,7 @@ void display(Shader shader, Shader text, Model cielo, Model ave, Model alaDer, M
 	model = glm::scale(model, glm::vec3(0.1f, 0.1f, 0.1f));
 	shader.setMat4("model", model);
 	alberca.Draw(shader); // ALBERCA
-	
+
 	model = glm::translate(temporal, glm::vec3(-13.0f, 0.0f, -8.0f));
 	model = glm::rotate(model, glm::radians(-180.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 	model = glm::scale(model, glm::vec3(0.05f, 0.05f, 0.05f));
@@ -982,9 +982,9 @@ void display(Shader shader, Shader text, Model cielo, Model ave, Model alaDer, M
 	shader.setMat4("model", model);
 	Salma.Draw(shader); // RECAMARA SALMA
 
-	model = glm::translate(temporal, glm::vec3(0.0f, 0.0f, -15.0f));
+	model = glm::translate(temporal, glm::vec3(-2.0f, 0.0f, -14.5f));
 	model = glm::rotate(model, glm::radians(-360.0f), glm::vec3(0.0f, 1.0f, .0f));
-	model = glm::scale(model, glm::vec3(0.05f, 0.05f, 0.05f));
+	model = glm::scale(model, glm::vec3(0.06f, 0.06f, 0.06f));
 	shader.setMat4("model", model);
 	cocina.Draw(shader); // COCINA
 
@@ -1013,8 +1013,8 @@ void display(Shader shader, Shader text, Model cielo, Model ave, Model alaDer, M
 	shader.setMat4("model", model);
 	Javi.Draw(shader); // RECAMARA JAVI
 
-	model = glm::translate(temporal, glm::vec3(-13.0f, 0.0f, 12.2f));
-	model = glm::scale(model, glm::vec3(0.05f, 0.05f, 0.05f));
+	model = glm::translate(temporal, glm::vec3(-13.0f, 0.0f, 11.8f));
+	model = glm::scale(model, glm::vec3(0.042f, 0.042f, 0.042f));
 	shader.setMat4("model", model);
 	Mau.Draw(shader); // RECAMARA MAU
 
@@ -1070,7 +1070,7 @@ void display(Shader shader, Shader text, Model cielo, Model ave, Model alaDer, M
 	model = glm::scale(model, glm::vec3(0.01f, 0.01, 0.01f));
 	shader.setMat4("model", model);
 	llanta.Draw(shader); //TRASERA IZQ LLANTA*/
-	
+
 
 	if (cam2) {
 
@@ -1117,8 +1117,8 @@ void display(Shader shader, Shader text, Model cielo, Model ave, Model alaDer, M
 
 
 	}
-	
-	
+
+
 	//DRON
 	model = glm::translate(glm::mat4(1.0f), glm::vec3(posAX, posAY, posAZ));
 	model = glm::scale(model, glm::vec3(0.10f, 0.10f, 0.10f));
@@ -1200,7 +1200,7 @@ void display(Shader shader, Shader text, Model cielo, Model ave, Model alaDer, M
 	shader.setMat4("model", model);
 	BraIzq.Draw(shader);
 
-	
+
 
 
 
@@ -1341,14 +1341,14 @@ int main()
 	// Load models
 
 
-	
+
 	Model cieloModel = ((char *)"Models/cielo/cielo.obj");
-	
-	
+
+
 	Model aveModel = ((char *)"Models/ave/ave.obj");
 	Model alaDerModel = ((char *)"Models/ave/AlaDer.obj");
 	Model alaIzqModel = ((char *)"Models/ave/AlaIzq.obj");
-	
+
 	Model PieDer = ((char *)"Models/Mono/PieDer.obj");
 	Model PieIzq = ((char *)"Models/Mono/PieIzq.obj");
 	Model casa = ((char *)"Models/CASA3/CASA.obj");

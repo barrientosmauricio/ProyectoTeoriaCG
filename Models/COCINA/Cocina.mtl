@@ -1,5 +1,5 @@
 # 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
-# File Created: 11.01.2021 21:36:14
+# File Created: 26.01.2021 13:33:20
 
 newmtl BARRA
 	Ns 10.0000
@@ -167,20 +167,6 @@ newmtl Mesa
 	map_Ka Mesa marmol.jpg
 	map_Kd Mesa marmol.jpg
 
-newmtl PATAS_SILLA1
-	Ns 10.0000
-	Ni 1.5000
-	d 1.0000
-	Tr 0.0000
-	Tf 1.0000 1.0000 1.0000 
-	illum 2
-	Ka 0.5880 0.5880 0.5880
-	Kd 0.5880 0.5880 0.5880
-	Ks 0.0000 0.0000 0.0000
-	Ke 0.0000 0.0000 0.0000
-	map_Ka Beige.jpg
-	map_Kd Beige.jpg
-
 newmtl Silla_1
 	Ns 10.0000
 	Ni 1.5000
@@ -195,7 +181,7 @@ newmtl Silla_1
 	map_Ka Madera fina.jpg
 	map_Kd Madera fina.jpg
 
-newmtl PATAS_SILLA2
+newmtl PATAS_SILLA1
 	Ns 10.0000
 	Ni 1.5000
 	d 1.0000
@@ -222,6 +208,20 @@ newmtl SILLA_2
 	Ke 0.0000 0.0000 0.0000
 	map_Ka Madera fina.jpg
 	map_Kd Madera fina.jpg
+
+newmtl PATAS_SILLA2
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka Beige.jpg
+	map_Kd Beige.jpg
 
 newmtl MUEBLE_PRINCIPAL
 	Ns 10.0000
